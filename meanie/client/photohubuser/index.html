@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PhotoHub</title>
+
+    <link rel="shortcut icon" href="/photohubuser/_content/images/logo.png" type="image/png" />
+    <link rel="icon" href="/photohubuser/_content/images/logo.png" type="image/png" />
+
+    <!-- bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!-- jquery ui -->
+    <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+
+    <!-- meanie -->
+    <link href="_dist/app.css" rel="stylesheet" />
+
+    
+    
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <ul class="nav nav-tabs">
+            <li ng-class="{active: activeTab === 'photographers'}"><a href="#/photographers">Photographers</a></li>
+            <li ng-class="{active: activeTab === 'maplocator'}"><a href="#/maplocator">Locate</a></li>            
+            <li ng-class="{active: activeTab === 'account'}"><a href="#/account">Account</a></li>
+            <li><a href="/security/login" target="_self">Logout</a></li>
+        </ul>
+        <div class="logo">
+            <img src="/photohubuser/_content/images/logo.png" />
+            PhotoHub
+        </div>
+        <div class="flash-message" ng-if="flash">
+            <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main ui-view></main>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <!-- underscore -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+    <!-- moment -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+
+    <!-- angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+    <!-- angular rating -->
+    <script src="https://code.angularjs.org/1.5.0/angular-animate.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-aria.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="_content\custom\jk-rating-stars.min.css" />
+    <script src="_content\custom\jk-rating-stars.min.js"></script>
+
+    <!-- ckeditor -->
+    <script src="//cdn.ckeditor.com/4.5.7/full/ckeditor.js"></script>
+    <script src="//cdn.ckeditor.com/4.5.7/full/adapters/jquery.js"></script>
+
+    <!-- additional -->  
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTIkmGEdVxsurnPrZpsQnmAq57Up2Hmec&callback=angular.noop"></script>  
+
+    <!-- meanie -->
+    <script src="_dist/app.min.js"></script>
+    
+</body>
+</html>
